@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #3a2a28;
+    background-color: #fff9f7;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* красивая градиентная секция с hero */
+.hero {
+    background: linear-gradient(145deg, #ffefea 0%, #fff3e8 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 215, 200, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: #4e2e2a;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #5f4540;
+    font-weight: 400;
+    max-width: 450px;
+    animation: fadeUp 1s 0.1s both;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #d9ab9a;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    animation: fadeUp 1s 0.05s both;
+}
+
+.btn-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s 0.2s both;
+}
+
+.btn {
+    padding: 14px 38px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #c2796b;
+    color: white;
+    box-shadow: 0 8px 18px -6px rgba(194, 121, 107, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #b36354;
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px -8px #c2796b;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #c2796b;
+    color: #c2796b;
+}
+
+.btn-outline:hover {
+    background-color: #c2796b;
+    color: white;
+}
+
+.hero-image {
+    text-align: center;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+    animation: float 4s infinite alternate ease-in-out;
+}
+
+.hero-image img {
+    max-width: 100%;
+    width: 500px;
+    border-radius: 40px 40px 40px 40px;
+    transform: rotate(2deg);
+    box-shadow: 0 40px 50px -20px rgba(90, 50, 40, 0.3);
+}
+
+/* секция вкусняшек */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #4e2e2a;
+    margin-bottom: 16px;
+}
+
+.section-sub {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #7a5d57;
+    font-size: 1.2rem;
+}
+
+.cakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.cake-card {
+    background: white;
+    border-radius: 32px;
+    padding: 30px 20px 25px;
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #ffeae3;
+}
+
+.cake-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 40px -15px #ccaea3;
+}
+
+.cake-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fadcd2;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 15px -8px #b5968a;
+}
+
+.cake-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #4e2e2a;
+}
+
+.cake-desc {
+    color: #735f59;
+    margin: 12px 0;
+    font-size: 1rem;
+    padding: 0 8px;
+}
+
+.price {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #b45f4f;
+    margin: 15px 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-small {
+    background: #fff1ec;
+    border: none;
+    color: #b45f4f;
+    padding: 12px 28px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-small:hover {
+    background: #c2796b;
+    color: white;
+    border-color: #c2796b;
+}
+
+/* о нас с перевесом */
+.about {
+    background: #fceee8;
+    border-radius: 80px 0 80px 0;
+    margin: 60px 0;
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    color: #3e2b27;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #624e48;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 30px 30px -15px #a38174;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #c2796b;
+    font-family: 'Playfair Display', serif;
+}
+
+/* отзывы */
+.testimonials {
+    background: white;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background: #fdf5f2;
+    border-radius: 40px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 18px #edd9d1;
+}
+
+.review-card i {
+    color: #d9ab9a;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-style: italic;
+    margin: 15px 0;
+    color: #4f3c37;
+}
+
+.customer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* заказ форма */
+.order-section {
+    background: linear-gradient(120deg, #ffe7df, #fff1ea);
+    border-radius: 60px 60px 0 0;
+}
+
+.order-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 50px;
+    border-radius: 60px;
+    box-shadow: 0 15px 25px -10px #cfb1a6;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 18px 22px;
+    border: 2px solid #f0cfc2;
+    border-radius: 60px;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+textarea {
+    border-radius: 30px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #c2796b;
+    box-shadow: 0 0 0 4px rgba(194, 121, 107, 0.2);
+}
+
+.submit-btn {
+    background: #c2796b;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 60px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: #aa5f51;
+    transform: scale(1.02);
+}
+
+footer {
+    background: #4e2e2a;
+    color: #fadcd2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-icons i {
+    font-size: 1.8rem;
+    margin: 0 12px;
+    color: #ecc7bb;
+    transition: 0.2s;
+}
+
+.social-icons i:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+/* мобилки */
+@media (max-width: 800px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .about .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}

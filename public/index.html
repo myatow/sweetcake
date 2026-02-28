@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCake | авторские торты</title>
+    <!-- Google Fonts & Font Awesome for beauty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- шапка с hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-crown" style="margin-right: 6px;"></i>Авторская
+                    кондитерская</span>
+                <h1>Торты для самых сладких моментов</h1>
+                <p>Нежные, стильные, полностью handmade. Погрузитесь в мир вкуса вместе с SweetCake.</p>
+                <div class="btn-group">
+                    <a href="#catalog" class="btn btn-primary">Выбрать торт</a>
+                    <a href="#order" class="btn btn-outline">Индивидуальный заказ</a>
+                </div>
+                <div style="margin-top: 40px; display: flex; gap: 30px; color:#aa7a6e;">
+                    <span><i class="fas fa-check-circle" style="color:#c2796b;"></i> Натуральные ингредиенты</span>
+                    <span><i class="fas fa-truck"></i> Доставка 0₽</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- красивое изображение главного торта -->
+                <img src="cakes/intro.avif" alt="красивый торт с ягодами">
+            </div>
+        </div>
+    </section>
+
+    <!-- каталог тортов -->
+    <section class="section" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Наши бестселлеры</h2>
+            <p class="section-sub">Попробуйте торты, которые заказывают чаще всего — идеальный баланс нежности и вкуса
+            </p>
+            <div class="cakes-grid" id="cakeContainer">
+                <!-- карточки будут динамически через JS, но добавим разметку для красоты -->
+            </div>
+        </div>
+    </section>
+
+    <!-- о нас -->
+    <div class="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>Где живёт <br>настоящий вкус</h2>
+                <p>Мы печём торты с 2015 года. Каждый десерт — маленькая история, в которой только лучшие масла, ягоды и
+                    бельгийский шоколад. Никаких заменителей и пальмового масла.</p>
+                <p>Наш кондитерский дом создаёт торты, которые украшают самые важные события — от дня рождения до
+                    свадьбы.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-num">3500+</div>
+                        <div>счастливых клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">8</div>
+                        <div>видов начинок</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="cakes/info.avif" alt="процесс приготовления торта">
+            </div>
+        </div>
+    </div>
+
+    <!-- отзывы -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Вам понравится</h2>
+            <p class="section-sub">Более 90% заказчиков возвращаются к нам снова</p>
+            <div class="review-grid">
+                <div class="review-card">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Заказывала мужу на юбилей торт «Шоколадный бархат». Это было невероятно вкусно! Очень красивый
+                        декор, спасибо команде SweetCake.</p>
+                    <div class="customer">
+                        <img src="clients/woman1.jpg" alt="фото клиента">
+                        <div><strong>Екатерина</strong><br><span style="font-size: 0.8rem;">12.03.2025</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Заказывали торт на крестины дочери. Очень нежный дизайн, ягоды свежие, бисквит просто тает во
+                        рту. Спасибо за такую красоту!</p>
+                    <div class="customer">
+                        <img src="clients/man1.jpg" alt="фото клиента">
+                        <div><strong>Алексей</strong><br><span style="font-size:0.8rem;">5 дней назад</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Брали капкейки и медовик на корпоратив. Все разобрали за минуту! Очень вкусно, стильно и
+                        доставили вовремя. Спасибо!</p>
+                    <div class="customer">
+                        <img src="clients/woman2.png" alt="фото клиента">
+                        <div><strong>Ольга</strong><br><span style="font-size:0.8rem;">20.02.2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- форма заказа -->
+    <section class="section order-section" id="order">
+        <div class="container">
+            <div class="order-form">
+                <h2 class="section-title" style="margin-top: 0;">Оформить заказ</h2>
+                <p class="section-sub" style="margin-bottom: 30px;">Мы свяжемся с вами для уточнения деталей</p>
+                <form id="cakeOrderForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="cakeSelect">
+                            <option value="Медовый торт">Медовый торт (классика)</option>
+                            <option value="Красный бархат">Красный бархат</option>
+                            <option value="Фисташковый малина">Фисташковый с малиной</option>
+                            <option value="Три шоколада">Три шоколада</option>
+                            <option value="Индивидуальный">Индивидуальный дизайн</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="3" placeholder="Комментарий: вес, пожелания по декору" id="message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="orderBtn">Заказать со скидкой 10%</button>
+                    <p style="text-align: center; margin-top: 15px; font-size:0.9rem; opacity:0.8;">*первый заказ —
+                        бесплатная доставка</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- подвал -->
+    <footer>
+        <div class="container">
+            <h3 style="color: #ffdad2; font-size: 2rem;">SweetCake</h3>
+            <p style="margin: 15px 0 10px;">Кондитерская ручной работы в центре города</p>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-vk"></i>
+            </div>
+            <p style="margin-top: 30px; font-size:0.9rem;">© 2025 SweetCake — вкусно, как у бабушки, красиво, как в
+                журнале</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
