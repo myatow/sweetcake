@@ -29,15 +29,16 @@ app.use(express.static(path.join(__dirname, 'Public')));
 // Обработка заказов
 app.post('/api/order', async (req, res) => {
     try {
-        const { name, phone, cake, message } = req.body;
+        const { name, phone, email, cake, message } = req.body; // Добавьте email
 
-        console.log('📦 Получен заказ:', { name, phone, cake, message });
+        console.log('📦 Получен заказ:', { name, phone, email, cake, message });
 
         // Формируем сообщение для Telegram
         const telegramMessage = `
 🍰 <b>Новый заказ!</b>
 👤 <b>Имя:</b> ${name}
 📞 <b>Телефон:</b> ${phone}
+📧 <b>Email:</b> ${email}
 🎂 <b>Торт:</b> ${cake}
 📝 <b>Комментарий:</b> ${message || 'Нет'}
         `;
